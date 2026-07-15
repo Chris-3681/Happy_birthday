@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #020617;
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08101f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff4d8d, #d946ef);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(#ff6aa8, #ec4899);
+}
+
+/* Text Selection */
+
+::selection {
+  background: rgba(236, 72, 153, 0.35);
+  color: white;
+}
+
+/* Global Images */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Smooth Button Feel */
+
+button {
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+/* Romantic Script Font */
+
+.script-font {
+  font-family: "Great Vibes", cursive;
+}
+
+/* Paper Fonts */
+
+.paper-title {
+  font-family: "Dancing Script", cursive;
+}
+
+.paper-writing {
+  font-family: "Caveat", cursive;
+}
+
+/* Romantic Glow */
+
+.romantic-glow {
+  box-shadow:
+    0 0 40px rgba(236, 72, 153, .15),
+    0 0 80px rgba(236, 72, 153, .08);
+}
+
+/* Paper Texture */
+
+.paper {
+  background-color: #fffaf0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, .02) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.fade-up {
+  animation: fadeUp .8s ease forwards;
+}
+
+/* Floating Hearts */
+
+@keyframes floatHeart {
+
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: .35;
+  }
+
+  80% {
+    opacity: .2;
+  }
+
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+
+}
+
+.float-heart {
+  position: absolute;
+  animation: floatHeart linear infinite;
+}
